@@ -45,13 +45,13 @@ const CONFIG = {
 
 ```js
 // background.js
-const BASE_URL = "https://cdn.jsdelivr.net/gh/YOUR_USERNAME/YOUR_REPO@main/";
+const BASE_URL = "https://cdn.jsdelivr.net/gh/ankilshah4193/bible-verses@main/";
 ```
 
 Also update the `host_permissions` URL in `manifest.json`:
 
 ```json
-"host_permissions": ["https://cdn.jsdelivr.net/gh/YOUR_USERNAME/YOUR_REPO/*"]
+"host_permissions": ["https://cdn.jsdelivr.net/gh/ankilshah4193/bible-verses/*"]
 ```
 
 ### 2 · Add icons
