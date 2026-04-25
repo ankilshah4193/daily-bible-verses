@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Holy Bible — Instant Wisdom",
+  "short_name": "Bible Wisdom",
+  "version": "1.0",
+  "description": "Receive a fresh, inspiring verse from the Holy Bible every time you open the side panel.",
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://cdn.jsdelivr.net/gh/ankilshah4193/bible-verses/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "verse.html"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.jpeg",
+      "32": "icons/icon32.jpeg",
+      "48": "icons/icon48.jpeg",
+      "128": "icons/icon128.jpeg"
+    },
+    "default_title": "Open Holy Bible"
+  },
+  "icons": {
+    "16": "icons/icon16.jpeg",
+    "32": "icons/icon32.jpeg",
+    "48": "icons/icon48.jpeg",
+    "128": "icons/icon128.jpeg"
+  }
+}

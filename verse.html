@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holy Bible — Instant Wisdom</title>
+  <link rel="stylesheet" href="verse.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="panel">
+    <header class="panel__header">
+      <div class="header__icon" aria-hidden="true">✝</div>
+      <div class="header__titles">
+        <span class="header__subtitle" id="bibleTitle">Holy Bible</span>
+        <h1 class="header__title" id="reference">Book 0, Chapter 0, Verse 0</h1>
+      </div>
+    </header>
+
+    <article class="panel__verse-container" style="padding-bottom: 0;">
+      <div id="verseContainer">
+      </div>
+    </article>
+
+    <section class="panel__controls">
+      <label class="controls__label" id="langLabel" for="langSelect">Language</label>
+      <div class="select-wrapper">
+        <select id="langSelect" class="modern-select">
+          <option value="english">English</option>
+          <option value="spanish">Español (Spanish)</option>
+          <option value="portuguese">Português (Portuguese)</option>
+          <option value="french">Français (French)</option>
+          <option value="tagalog">Tagalog (Filipino)</option>
+          <option value="swahili">Kiswahili (Swahili)</option>
+          <option value="mandarin_chinese">中文 (Mandarin)</option>
+          <option value="russian">Русский (Russian)</option>
+          <option value="malayalam">മലയാളം (Malayalam)</option>
+        </select>
+      </div>
+      <span class="controls__hint" id="langHint" aria-live="polite">Saved for future verses</span>
+    </section>
+
+    <article class="panel__verse-container" style="padding-top: 0;">
+      <div id="reflectionContainer">
+      </div>
+    </article>
+
+    <footer class="panel__footer">
+      <div class="footer__greeting" id="greetingLabel">Peace be with you</div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressFill"></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="verse.js"></script>
+</body>
+</html>
