@@ -38,7 +38,7 @@ const CONFIG = {
   BASE_URL: "https://cdn.jsdelivr.net/gh/ankilshah4193/bible-verses@main/",
   TOTAL_VERSES: 1089,
   BATCH_SIZE: 1000,
-  DATA_VERSION: "1.0",
+  DATA_VERSION: "1.1",
   // ...
 };
 ```

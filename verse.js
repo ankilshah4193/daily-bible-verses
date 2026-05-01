@@ -2,7 +2,7 @@ const CONFIG = {
   BASE_URL: "https://cdn.jsdelivr.net/gh/ankilshah4193/bible-verses@main/",
   TOTAL_VERSES: 1089,
   BATCH_SIZE: 1000,
-  DATA_VERSION: "1.0",
+  DATA_VERSION: "1.1",
 
   SCRIPTURE_LABELS: {
     english:           "Sacred Scripture",
@@ -38,6 +38,18 @@ const CONFIG = {
     mandarin_chinese:  { chapter: "章",        verse: "节",        brand: "圣 经",              langLabel: "语言",     langHint: "已保存,适用于以后的经文" },
     russian:           { chapter: "Глава",     verse: "Стих",      brand: "Святая Библия",     langLabel: "Язык",     langHint: "Сохранено для будущих стихов" },
     malayalam:         { chapter: "അദ്ധ്യായം", verse: "വാക്യം",   brand: "വിശുദ്ധ ബൈബിൾ",    langLabel: "ഭാഷ",     langHint: "ഭാവി വാക്യങ്ങൾക്കായി സംരക്ഷിച്ചു" }
+  },
+
+  LOADING: {
+    english:           "Loading…",
+    spanish:           "Cargando…",
+    portuguese:        "Carregando…",
+    french:            "Chargement…",
+    tagalog:           "Naglo-load…",
+    swahili:           "Inapakia…",
+    mandarin_chinese:  "加载中…",
+    russian:           "Загрузка…",
+    malayalam:         "ലോഡ് ചെയ്യുന്നു…"
   },
 
   GREETINGS: {
@@ -160,6 +172,13 @@ async function initializeApp() {
     currentIdx = state.index;
     const language = langPref.language || "english";
     elements.langSelect.value = language;
+
+    // Show localized loading state before the fetch
+    const trans = CONFIG.TRANSLATIONS[language] || CONFIG.TRANSLATIONS.english;
+    elements.bibleTitle.textContent = trans.brand;
+    elements.reference.textContent  = CONFIG.LOADING[language] || CONFIG.LOADING.english;
+    if (elements.langLabel) elements.langLabel.textContent = trans.langLabel;
+    if (elements.langHint)  elements.langHint.textContent  = trans.langHint;
 
     currentVerseData = await fetchVerseData(currentIdx);
 
