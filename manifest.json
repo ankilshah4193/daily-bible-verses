@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Holy Bible — Instant Wisdom",
   "short_name": "Bible Wisdom",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Receive a fresh, inspiring verse from the Holy Bible every time you open the side panel.",
   "permissions": [
     "storage",
